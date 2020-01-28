@@ -22,7 +22,7 @@ export function* singIn({ payload }) {
 
     history.push('/dashboard');
   } catch (error) {
-    toast.error('Usuário ou senha inválido');
+    toast.error(error);
     yield put(signFailure());
   }
 }

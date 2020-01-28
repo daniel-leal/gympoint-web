@@ -56,9 +56,14 @@ export const Profile = styled.div`
       display: block;
       color: ${colors.strong};
     }
-    span {
-      cursor: pointer;
-      color: ${colors.red};
+    button {
+      background: transparent;
+      border: 0;
+      display: block;
+      margin-top: 2px;
+      font-size: 14px;
+      line-height: 16px;
+      color: ${colors.primary};
     }
   }
 `;
