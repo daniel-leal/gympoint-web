@@ -20,7 +20,7 @@ export function* singIn({ payload }) {
 
     yield put(signInSucess(token, user));
 
-    history.push('/dashboard');
+    history.push('/alunos');
   } catch (error) {
     toast.error(error);
     yield put(signFailure());

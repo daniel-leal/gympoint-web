@@ -7,6 +7,7 @@ import logo from '~/assets/logo-header.png';
 
 import { Container, Content, Profile, Menu } from './styles';
 import { signOut } from '~/store/modules/auth/actions';
+import Notifications from '../Notifications';
 
 export default function Header() {
   const profile = useSelector(state => state.user.profile);
@@ -26,7 +27,7 @@ export default function Header() {
 
           <ul>
             <li>
-              <Menu activeStyle={{ color: colors.linkActive }} to="#">
+              <Menu activeStyle={{ color: colors.linkActive }} to="/alunos">
                 ALUNOS
               </Menu>
             </li>
@@ -36,12 +37,12 @@ export default function Header() {
               </Menu>
             </li>
             <li>
-              <Menu activeStyle={{ color: colors.linkActive }} to="#">
+              <Menu activeStyle={{ color: colors.linkActive }} to="/matriculas">
                 MATRÍCULAS
               </Menu>
             </li>
             <li>
-              <Menu activeStyle={{ color: colors.linkActive }} to="#">
+              <Menu activeStyle={{ color: colors.linkActive }} to="/help">
                 PEDIDOS DE AUXÍLIO
               </Menu>
             </li>
@@ -49,6 +50,7 @@ export default function Header() {
         </nav>
 
         <aside>
+          <Notifications />
           <Profile>
             <div>
               <strong>{profile.name}</strong>
