@@ -18,8 +18,7 @@ ButtonLink.defaultProps = {
 };
 
 ButtonLink.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   to: PropTypes.string,
   color: PropTypes.string,
 };

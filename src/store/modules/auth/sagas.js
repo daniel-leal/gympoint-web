@@ -22,7 +22,9 @@ export function* singIn({ payload }) {
 
     history.push('/alunos');
   } catch (error) {
-    toast.error(error);
+    error.response.data.messages.map(msg => {
+      return toast.error(msg.message);
+    });
     yield put(signFailure());
   }
 }

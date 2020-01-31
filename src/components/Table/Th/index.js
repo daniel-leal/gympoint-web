@@ -1,5 +1,5 @@
 import React from 'react';
-import PropsTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { CustomTh } from './styles';
 
 export default function Th({ children, align, ...rest }) {
@@ -12,12 +12,10 @@ export default function Th({ children, align, ...rest }) {
 
 Th.defaultProps = {
   align: 'left',
+  children: null,
 };
 
 Th.propTypes = {
-  children: PropsTypes.oneOfType([
-    PropsTypes.arrayOf(PropsTypes.node),
-    PropsTypes.node,
-  ]).isRequired,
-  align: PropsTypes.string,
+  children: PropTypes.node,
+  align: PropTypes.string,
 };
